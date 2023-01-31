@@ -69,22 +69,24 @@ public class Day implements Cloneable, Comparable<Day> {
 
     }
 
-    public Day plusDays(int plus){//only consider small day overflows
-        int dayOverFlow = 0;
-        int y = year;
-        int m = month;
-        int d = this.day+plus;
-        if(valid(y,m,d))
-            return new Day(y,m,d);
-        else{
-            while(!valid(y,m,d)){
-                dayOverFlow++;
-                d--;
-            }
-            m++;
-            d = dayOverFlow;
-            return new Day(y,m,d);
+    public Day getNextDay(){
+        if(valid(year,month,day+1)){
+            return new Day(year, month, day+1);
         }
+        else if (valid(year, month+1,1)){
+            return new Day(year, month+1,1);
+        }
+        else{
+            return new Day(year+1, 1, 1);
+        }
+    }
+
+    public Day plusDays(int plus){//only consider small day overflow
+        Day result= null;
+        for (int i=0;i<plus;i++){
+            result=this.getNextDay();
+        }
+        return result;
     }
 
 

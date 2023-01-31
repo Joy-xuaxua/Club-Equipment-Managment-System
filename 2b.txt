@@ -1,0 +1,28 @@
+startNewDay 03-Jan-2022
+
+register 001 helena
+register 002 jason
+register 003 paul
+
+create E1 3D_Scanner
+create E2 Smart_Glasses
+
+listEquipment
+
+startNewDay 07-Jan-2022
+create E3 Robot_Astro
+create E4 Laser_Keyboard
+
+arrive E1
+arrive E1
+arrive E2
+arrive E4
+
+listEquipment
+
+borrow 001 E1
+borrow 002 E2
+borrow 002 E1
+
+listMemberStatus
+listEquipmentStatus

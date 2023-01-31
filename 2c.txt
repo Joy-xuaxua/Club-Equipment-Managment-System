@@ -1,0 +1,43 @@
+startNewDay 03-Jan-2022
+
+register 001 ada
+register 002 brian
+
+create E1 Smart_Glasses
+create E2 Robot_Astro
+create E3 Laser_Keyboard
+
+arrive E1
+arrive E1
+arrive E2
+arrive E3
+
+undo
+undo
+undo
+listEquipmentStatus
+
+redo
+redo
+arrive E2
+redo
+listEquipmentStatus
+
+borrow 001 E1
+borrow 002 E2
+borrow 001 E2
+undo
+undo
+listEquipmentStatus
+listMemberStatus
+
+redo
+listEquipmentStatus
+listMemberStatus
+
+borrow 002 E1
+redo
+
+listEquipmentStatus
+listMemberStatus
+

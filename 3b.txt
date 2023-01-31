@@ -1,0 +1,65 @@
+startNewDay 03-Jan-2022
+
+register 001 helena 
+register 002 jason
+
+create E1 3D_Scanner
+create E2 Smart_Glasses
+
+arrive E1
+arrive E1
+arrive E2
+arrive E2
+
+listEquipment
+listMembers
+listEquipmentStatus
+listMemberStatus
+
+borrow 001 E1
+
+startNewDay 07-Jan-2022
+borrow 002 E2 10
+
+listEquipment
+listMembers
+
+listEquipmentStatus
+listMemberStatus
+
+request 001 E2 07-Feb-2022 5
+request 002 E1 04-Feb-2022 10
+request 002 E1 15-Feb-2022 10
+
+undo
+undo
+
+listEquipment
+listMembers
+listEquipmentStatus
+listMemberStatus
+
+redo
+
+listEquipment
+listMembers
+listEquipmentStatus
+listMemberStatus
+
+request 002 E1 26-Feb-2022 5
+request 002 E1 06-Mar-2022 5
+request 001 E1 03-Mar-2022 8
+
+redo
+listEquipment
+listMembers
+listEquipmentStatus
+listMemberStatus
+
+register 005 brian
+request 005 E2 31-Jan-2022 6
+request 005 E2 08-Feb-2022 3
+listEquipment
+listMembers
+listEquipmentStatus
+listMemberStatus
